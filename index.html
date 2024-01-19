@@ -4,48 +4,317 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biker Zone</title>
+    <!-- css link -->
     <link rel="stylesheet" href="styles/blog.css">
+    <!-- tailwind and daisy link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- tailwind class -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'bike-primary': '#E76F51',
+              }
+            }
+          }
+        }
+      </script>
+
+
+    <!-- general css -->
+    <style>
+        .font-poppins{
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <header class="bg-[#264653] mx-12">
-        <nav>
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
+<body class="font-poppins">
+    <header class="bg-[#264653] mx-12 text-white md:container md:mx-auto px-14">
+        <nav class="">
+            <div class="navbar">
+                <div class="flex-1">
                   <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] pl-10 shadow bg-base-100 rounded-box w-52">
-                      <li><a>Home</a></li>
-                      <li><a>Shop</a></li>
-                      <li><a>News</a></li>
-                      <li><a>Contact</a></li>
-                    </ul>
                   </div>
-                  <a class="btn btn-ghost text-xl">Biker Zone</a>
+                  <a class="btn btn-ghost font-poppins font-bold text-1xl md:text-3xl lg:text-4xl">Biker Zone</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
+                  <ul class="menu menu-horizontal m-7">
+                    <li class="text-bike-primary"><a>Home</a></li>
                     <li><a>Shop</a></li>
                     <li><a>News</a></li>
                     <li><a>Contact</a></li>
                   </ul>
                 </div>
-                <div class="navbar-end">
-                  <a class="btn btn-error text-white">Button</a>
+                <div class="">
+                  <a class="btn bg-bike-primary border-0 text-white w-15 p-2 md:p-5 lg:p-7 items-center">LogOut</a>
                 </div>
               </div>
         </nav>
+        <section class="container p-12 ">
+            <div class="  shadow-xl flex flex-col-reverse lg:flex-row-reverse ">
+                <figure><img class=" " src="images/others/extrabike.png"/></figure>
+                <div class="card-body w-1/2">
+                  <p class="text-0.1xl font-light p-4">Computer-controlled digital transistorized with electronic advance</p>
+                  <h1 class="card-title text-4xl text-[#FFF] font-bold p-4">Honda CBR 300R</h1>
+                  <p class="text-1xl font-light p-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                  <div class="card-actions p-4">
+                    <button class="btn bg-bike-primary text-white px-14 border-0">Purchase</button>
+                  </div>
+                </div>
+              </div>
+        </section>
 
     </header>
-    <main>
+    <main class="md:container md:mx-auto p-14">
+      <div>
+        <h1 class="card-title text-4xl font-bold items-center justify-center">Fetured Bikes In This Year</h1>
+        <p class="card-title text-1xl py-7 font-bold items-center justify-center">Best bike collection</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-7">
+          <img class="h-3/4" src="images/others/bike-1.jpg" alt="">
+          <img class="1/2" src="images/others/bike-4.jpg" alt="">
+          <img class="1/2" src="images/others/bike-3.jpg" alt="">
+        </div>
+      </div>
+      <div>
+        <h1 class="card-title text-4xl font-bold items-center justify-center">latest News</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pt-14">
+          <!-- card one -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/others/latest2.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">
+                Shoes!
+                <div class="badge badge-secondary">NEW</div>
+              </h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <div class="badge badge-outline">Fashion</div> 
+                <div class="badge badge-outline">Products</div>
+              </div>
+            </div>
+          </div>
+          <!-- card tow -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/others/latest1.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">
+                Shoes!
+                <div class="badge badge-secondary">NEW</div>
+              </h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <div class="badge badge-outline">Fashion</div> 
+                <div class="badge badge-outline">Products</div>
+              </div>
+            </div>
+          </div>
+          <!-- card three -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/others/latest3.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">
+                Shoes!
+                <div class="badge badge-secondary">NEW</div>
+              </h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <div class="badge badge-outline">Fashion</div> 
+                <div class="badge badge-outline">Products</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!-- Happy Clients says -->
+        
+
+        <div>
+            <h1 class="card-title text-4xl font-bold items-center justify-center p-14">Happy Clients says</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              <!-- profile card one -->
+              <div class="card w-96 bg-base-100 shadow-xl items-center justify-center">
+                <div class="avatar">
+                  <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <img src="images/others/bristy.jpg" />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title items-center justify-center py-4">
+                    Bristy Roy
+                  </h2>
+                  <p class="items-center justify-center py-4">Slate helps you see how 
+                    many more days you need 
+                    to work to reach your financial 
+                    goal for the month and year.</p>
+                    <div class="rating py-4">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                  <div class="items-center justify-center">
+                    <p class="items-center justify-center">Regina Miles<br> Banker</p>
+                   
+                  </div>
+                </div>
+              </div>
+              <!-- profile card tow -->
+              <div class="card w-96 bg-base-100 shadow-xl items-center justify-center">
+                <div class="avatar">
+                  <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <img src="images/others/Nitima.jpg" />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title items-center justify-center py-4">
+                    Nitima Roy
+                  </h2>
+                  <p class="items-center justify-center py-4">Slate helps you see how 
+                    many more days you need 
+                    to work to reach your financial 
+                    goal for the month and year.</p>
+                    <div class="rating py-4">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                  <div class="items-center justify-center">
+                    <p class="items-center justify-center">Regina Miles<br> Banker</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- profile card three -->
+              <div class="card w-96 bg-base-100 shadow-xl items-center justify-center">
+                <div class="avatar">
+                  <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <img src="images/others/Ridoy.jpg" />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title items-center justify-center py-4">
+                    Ridoy Mojumder
+                  </h2>
+                  <p class="items-center justify-center py-4">Slate helps you see how 
+                    many more days you need 
+                    to work to reach your financial 
+                    goal for the month and year.</p>
+                    <div class="rating py-4">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                  <div class="items-center justify-center">
+                    <p class="items-center justify-center">Regina Miles<br> Banker</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- Frequently Asked Questions -->
+
+    <div>
+      <div>
+        <h1 class="card-title text-4xl font-bold items-center justify-center py-24">Frequently Asked Questions</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <div>
+            <img class="h-3/4" src="images/others/Frame.png" alt="">
+          </div>
+          <div>
+            <div class="join join-vertical w-full">
+              <div class="collapse collapse-arrow join-item border border-base-300">
+                <input type="radio" name="my-accordion-4" checked="checked" /> 
+                <div class="collapse-title text-xl font-medium">
+                  What are the most important things I should
+                  know about riding a bike?
+                </div>
+                <div class="collapse-content"> 
+                  <p>Safety First! Always obey the rules of the road. Obey all traffic signals, signs, and laws. Get in the mindset of “driving” your bike—not just “riding” your bike. This will help you be a more focused and legally compliant bike rider. </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow join-item border border-base-300">
+                <input type="radio" name="my-accordion-4" /> 
+                <div class="collapse-title text-xl font-medium">
+                  How can I tell if my helmet is old and I need a new one?
+                </div>
+                <div class="collapse-content"> 
+                  <p>Safety First! Always obey the rules of the road. Obey all traffic signals, signs, and laws. Get in the mindset of “driving” your bike—not just “riding” your bike. This will help you be a more focused and legally compliant bike rider. </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow join-item border border-base-300">
+                <input type="radio" name="my-accordion-4" /> 
+                <div class="collapse-title text-xl font-medium">
+                  My bike has been in storage is it safe to ride?
+                </div>
+                <div class="collapse-content"> 
+                  <p>Safety First! Always obey the rules of the road. Obey all traffic signals, signs, and laws. Get in the mindset of “driving” your bike—not just “riding” your bike. This will help you be a more focused and legally compliant bike rider. </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow join-item border border-base-300">
+                <input type="radio" name="my-accordion-4" /> 
+                <div class="collapse-title text-xl font-medium">
+                  What rules should I follow when riding my bike?
+                </div>
+                <div class="collapse-content"> 
+                  <p>Safety First! Always obey the rules of the road. Obey all traffic signals, signs, and laws. Get in the mindset of “driving” your bike—not just “riding” your bike. This will help you be a more focused and legally compliant bike rider. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
 
     </main>
-    <footer>
+    <footer class="grid grid-cols-2 p-10 bg-neutral text-neutral-content">
+      <div>
+        <h3 class="pl-24 pb-10">Download Here</h3>
+        <nav class="pl-24 pb-10">
+          <header class="footer-title">Services</header> 
+          <div class="lg:flex gap-5">
+            <a class="link link-hover">About</a>
+            <a class="link link-hover">Features</a>
+            <a class="link link-hover">Pricing</a>
+            <a class="link link-hover">Careers</a>
+            <a class="link link-hover">Help</a>
+            <a class="link link-hover">Privacy Policy</a>
+          </div>
+        </nav> 
+        <p class="pl-24 pb-10">© 2020 bike. All rights reserved</p>
+      </div>
 
+      <div class="pl-[250px] grid gap-2">
+        <h3>Get App</h3>
+        <img class="w-1/2" src="images/others/ios.png" alt="">
+        <img class="w-1/2" src="images/others/android.png" alt="">
+      </div>
+      
     </footer>
 </body>
 </html>
